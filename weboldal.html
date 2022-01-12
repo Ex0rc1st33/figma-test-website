@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weboldal.css">
+    <title>Teszt</title>
+</head>
+
+<body>
+    <header>
+        <div class="base-top">
+            <span class="base-top-left">
+                <span class="phone">09 87 654 3210</span>
+                <span class="contact">Kapcsolat</span>
+                <div class="vertical-line"></div>
+                <span class="about">Rólunk</span>
+                <div class="vertical-line"></div>
+                <span class="payment-transport-dropdown">
+                    Fizetés, szállítás
+                    <div class="payment-transport-dropdown-content">
+                        <ul>
+                            <li>Fizetés</li>
+                            <li>Szállítás</li>
+                        </ul>
+                    </div>
+                    <img class="arrow" src="./resources/arrow_white.svg" alt="arrow">
+                </span>
+            </span>
+            <span class="title">
+                <span class="title-left">Teszt</span><span class="title-right">téma</span>
+            </span>
+            <span class="base-top-right">
+                <span class="search-box">
+                    <input class="search" type="text" placeholder="keresés..."></input>
+                    <img class="magnifying_glass" src="./resources/magnifying_glass.svg" alt="magnifying_glass">
+                    <hr class="horizontal-line">
+                </span>
+                <span class="rest-of-the-icons">
+                    <img class="figure" src="./resources/figure.svg" alt="human_figure">
+                    <img class="heart" src="./resources/heart_white.svg" alt="heart">
+                    <img class="bag" src="./resources/bag.svg" alt="bag">
+                </span>
+            </span>
+        </div>
+        <div class="base-bottom">
+            <span class="menu-item">ARCÁPOLÁS</span>
+            <span class="menu-item">TESTÁPOLÁS</span>
+            <span class="menu-item">HAJÁPOLÁS</span>
+            <span class="menu-item">SMINK</span>
+            <span class="menu-item">BŐRTÍPUSOK</span>
+            <span class="menu-item">ÚJDONSÁGOK</span>
+            <span class="menu-item">FÉRFIAKNAK</span>
+            <span class="menu-item">BABA-MAMA</span>
+            <span class="menu-item">AJÁNDÉK ÖTLETEK</span>
+            <span class="menu-item">MÁRKÁK</span>
+            <span class="menu-item">AKCIÓ</span>
+        </div>
+    </header>
+    <div class="product-info">
+        <img class="potion" src="./resources/potion.svg" alt="potion">
+        <span class="description">kizárólag növényi eredetű alkotó elemek</span>
+    </div>
+    <div class="container-large">
+        <div class="container">
+            <div class="headline">
+                <div class="title">Lorem</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                </div>
+                <button class="details">
+                    <span class="label">Részletek</span>
+                    <img class="arrow" src="./resources/arrow_button_white.svg" alt="arrow">
+                </button>
+            </div>
+            <div class="crop">
+                <div class="gradient"></div>
+                <img class="flower" src="./resources/shutterstock_1477405955.png" alt="flower">
+            </div>
+            <div class="pages" id="pages">
+                <span class="circle" id="circle-1" onclick="switchToSelected(this.id)"></span>
+                <span class="circle" id="circle-2" onclick="switchToSelected(this.id)"></span>
+                <span class="circle selected" id="circle-3" onclick="switchToSelected(this.id)"></span>
+                <span class="circle" id="circle-4" onclick="switchToSelected(this.id)"></span>
+                <span class="circle" id="circle-5" onclick="switchToSelected(this.id)"></span>
+            </div>
+            <img class="arrow-left" src="./resources/arrow_black.svg" alt="arrow" onclick="slideToLeft()">
+            <img class="arrow-right" src="./resources/arrow_black.svg" alt="arrow" onclick="slideToRight()">
+        </div>
+        <div class="mosaic">
+            <div class="grid-large-wrapper">
+                <div class="header header-left black">Heading</div>
+                <img class="mosaic-item" src="./resources/shutterstock_1667920105_modified.png" alt="product">
+            </div>
+            <div class="grid-small-wrapper">
+                <div class="header header-left white">Heading</div>
+                <img class="mosaic-item" src="./resources/shutterstock_1020418684.png" alt="product">
+            </div>
+            <div class="grid-small-wrapper">
+                <div class="header header-right black">Heading</div>
+                <img class="mosaic-item" src="./resources/shutterstock_1710322954_modified.png" alt="product">
+            </div>
+            <div class="grid-small-wrapper">
+                <div class="header header-left black">Heading</div>
+                <img class="mosaic-item" src="./resources/shutterstock_1354457348_modified.png" alt="product">
+            </div>
+            <div class="grid-small-wrapper">
+                <div class="header header-right white">Heading</div>
+                <img class="mosaic-item" src="./resources/shutterstock_1377250259_modified.png" alt="product">
+            </div>
+            <div class="grid-large-wrapper">
+                <div class="header header-right">Heading</div>
+                <img class="mosaic-item" src="./resources/shutterstock_1310794589.png" alt="product">
+            </div>
+        </div>
+        <div class="sale">
+            <div class="title">akciós termékek</div>
+            <div class="items">
+                <div class="item">
+                    <div class="image-wrapper">
+                        <div class="triangle"></div>
+                        <img class="heart" id="heart-1" src="./resources/heart_black.svg" alt="heart"
+                            data-filled="false" onclick="setHeartColor(this.id, this.filled)">
+                        <img class="sale-item" src="./resources/sale_item_1.png" alt="product">
+                    </div>
+                    <div class="title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua incididunt ut.
+                    </div>
+                    <div class="quality">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="empty_star star" src="./resources/empty_star.svg" alt="empty_star">
+                        <span class="quantity">(12)</span>
+                    </div>
+                    <div class="price">
+                        <span class="old">12 300 Ft</span>
+                        <span class="new">10 900 Ft</span>
+                    </div>
+                    <button class="redirect">
+                        <span class="label">Kosárba</span>
+                    </button>
+                </div>
+                <div class="item">
+                    <div class="image-wrapper">
+                        <div class="triangle"></div>
+                        <img class="heart" id="heart-2" src="./resources/heart_black.svg" alt="heart"
+                            data-filled="false" onclick="setHeartColor(this.id, this.filled)">
+                        <img class="sale-item" src="./resources/sale_item_2.png" alt="product">
+                    </div>
+                    <div class="title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua incididunt ut.
+                    </div>
+                    <div class="quality">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="empty_star star" src="./resources/empty_star.svg" alt="empty_star">
+                        <span class="quantity">(12)</span>
+                    </div>
+                    <div class="price">
+                        <span class="old">12 300 Ft</span>
+                        <span class="new">10 900 Ft</span>
+                    </div>
+                    <button class="redirect">
+                        <span class="label">Kosárba</span>
+                    </button>
+                </div>
+                <div class="item">
+                    <div class="image-wrapper">
+                        <div class="triangle"></div>
+                        <img class="heart" id="heart-3" src="./resources/heart_black.svg" alt="heart"
+                            data-filled="false" onclick="setHeartColor(this.id, this.filled)">
+                        <img class="sale-item" src="./resources/sale_item_3.png" alt="product">
+                    </div>
+                    <div class="title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua incididunt ut.
+                    </div>
+                    <div class="quality">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="empty_star star" src="./resources/empty_star.svg" alt="empty_star">
+                        <span class="quantity">(12)</span>
+                    </div>
+                    <div class="price">
+                        <span class="old">12 300 Ft</span>
+                        <span class="new">10 900 Ft</span>
+                    </div>
+                    <button class="redirect">
+                        <span class="label">Kosárba</span>
+                    </button>
+                </div>
+                <div class="item">
+                    <div class="image-wrapper">
+                        <div class="triangle"></div>
+                        <img class="heart" id="heart-4" src="./resources/heart_black.svg" alt="heart"
+                            data-filled="false" onclick="setHeartColor(this.id)">
+                        <img class="sale-item" src="./resources/sale_item_4.png" alt="product">
+                    </div>
+                    <div class="title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua incididunt ut.
+                    </div>
+                    <div class="quality">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="full_star star" src="./resources/full_star.svg" alt="full_star">
+                        <img class="empty_star star" src="./resources/empty_star.svg" alt="empty_star">
+                        <span class="quantity">(12)</span>
+                    </div>
+                    <div class="price">
+                        <span class="old">12 300 Ft</span>
+                        <span class="new">10 900 Ft</span>
+                    </div>
+                    <button class="redirect">
+                        <span class="label">Kosárba</span>
+                    </button>
+                </div>
+            </div>
+            <button class="redirect">
+                <span class="label">Összes akciós termék</span>
+                <img class="arrow" src="./resources/arrow_button_black.svg" alt="arrow">
+            </button>
+        </div>
+        <div class="video">
+            <div class="video-wrapper">
+                <div class="video-background"></div>
+                <img class="video-img" src="./resources/video.png" alt="video_thumbnail">
+                <div class="details">
+                    <div class="title">a természetes szépségért</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </div>
+                    <button class="redirect">
+                        <span class="label">Részletek</span>
+                        <img class="arrow" src="./resources/arrow_button_white.svg" alt="arrow">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="menu">
+            <span class="menu-item">Kapcsolat</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Akciós termékek</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Adatvédelmi nyilatkozat</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Vásárlási feltételek</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Fizetés, szállítás</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Adatvédelem</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Segítség</span>
+            <div class="vertical-line"></div>
+            <span class="menu-item">Rólunk</span>
+        </div>
+        <div class="contact">
+            <span class="contact-item gray">4028 Debrecen, Kassai út 129</span>
+            <div class="vertical-line"></div>
+            <span class="contact-item">info@shoprenter.hu</span>
+            <div class="vertical-line"></div>
+            <span class="contact-item gray">+36-1/234-5012</span>
+            <div class="vertical-line"></div>
+            <span class="contact-item gray">Nyitvatartás: h-p 9-17</span>
+        </div>
+        <div class="social">
+            <img src="resources/facebook.svg" alt="facebook" class="social-item">
+            <img src="resources/instagram.svg" alt="instagram" class="social-item">
+            <img src="resources/youtube.svg" alt="youtube" class="social-item">
+            <img src="resources/messenger.svg" alt="messenger" class="social-item">
+            <img src="resources/twitter.svg" alt="twitter" class="social-item">
+        </div>
+        <div class="copyright">© 2021 Teszts téma</div>
+        <div class="language">
+            <span class="language-item">HU</span>
+            <span class="vertical-line"></span>
+            <span class="language-item">EN</span>
+            <span class="language-selector">
+                <span class="current-language">Huf</span>
+                <img class="arrow" src="./resources/arrow_white.svg" alt="arrow">
+                <div class="currency-dropdown-content">
+                    <ul>
+                        <li>Huf</li>
+                        <li>Eur</li>
+                        <li>Usd</li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+        <div class="info-wrapper">
+            <div class="info">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+                tempora
+                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+                autem
+                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+                illum
+                qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </div>
+        </div>
+    </footer>
+    <div class="payment-transport">
+        <img src="resources/gls.svg" alt="gls" class="payment-transport-item">
+        <img src="resources/dpd.svg" alt="dpd" class="payment-transport-item">
+        <img src="resources/paypal.svg" alt="paypal" class="payment-transport-item">
+        <img src="resources/mastercard.svg" alt="mastercard" class="payment-transport-item">
+        <img src="resources/maestro.svg" alt="maestro" class="payment-transport-item">
+        <img src="resources/webshop_of_the_month.svg" alt="webshop_of_the_month" class="payment-transport-item">
+        <img src="resources/arukereso.svg" alt="arukereso" class="payment-transport-item">
+    </div>
+</body>
+
+</html>
+
+<script>
+    function setHeartColor(id) {
+        const heart = document.getElementById(id);
+        if (heart.dataset.filled === "true") {
+            heart.setAttribute("src", "./resources/heart_black.svg");
+            heart.dataset.filled = "false";
+        } else {
+            heart.setAttribute("src", "./resources/heart_black_filled.svg");
+            heart.dataset.filled = "true";
+        }
+    }
+
+    function slideToLeft() {
+        const pages = document.getElementById("pages").children;
+        for (var i = 0; i < pages.length; i++) {
+            const circle = pages[i];
+            if (circle.classList.contains("selected")) {
+                circle.classList.remove("selected");
+                var newCircle;
+                if (i > 0) {
+                    newCircle = pages[i - 1];
+                } else {
+                    newCircle = pages[pages.length - 1];
+                }
+                newCircle.classList.add("selected");
+                return;
+            }
+        }
+    }
+
+    function slideToRight() {
+        const pages = document.getElementById("pages").children;
+        for (var i = 0; i < pages.length; i++) {
+            const circle = pages[i];
+            if (circle.classList.contains("selected")) {
+                circle.classList.remove("selected");
+                var newCircle;
+                if (i < pages.length - 1) {
+                    newCircle = pages[i + 1];
+                } else {
+                    newCircle = pages[0];
+                }
+                newCircle.classList.add("selected");
+                return;
+            }
+        }
+    }
+
+    function switchToSelected(id) {
+        const pages = document.getElementById("pages").children;
+        for (var i = 0; i < pages.length; i++) {
+            const circle = pages[i];
+            if (circle.classList.contains("selected")) {
+                circle.classList.remove("selected");
+                break;
+            }
+        }
+        const selected = document.getElementById(id);
+        selected.classList.add("selected");
+    }
+</script>
